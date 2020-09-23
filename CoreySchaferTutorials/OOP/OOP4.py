@@ -190,4 +190,13 @@ mgr_1 = Manager('Yousef','Nami',9000,[dev_1])
 print(mgr_1.email)
 mgr_1.print_emps()
 
-                     
+
+# useful functions
+
+print(isinstance(Manager,Employee)) # returns false, Manager is a subclass 
+print(isinstance(mgr_1,Employee))
+print(isinstance(mgr_1,Manager))
+
+print(issubclass(Manager,Employee))
+
+
