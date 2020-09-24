@@ -21,7 +21,7 @@ def encrypt(string):
             encrypted_string += str(letters[letter])
     return encrypted_string,letters
 
-print(encrypt('apple'))
+#print(encrypt('apple'))
 
 # Part 2: for a given string of characters representing a word pattern , return possible candidate words
 
@@ -42,5 +42,5 @@ def find_possible_cypher(code, df):
     
     return matches
         
-print(find_possible_cypher('01223',df))
+#print(find_possible_cypher('01223',df))
 
