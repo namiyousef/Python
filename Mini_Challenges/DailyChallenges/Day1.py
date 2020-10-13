@@ -43,3 +43,18 @@ print(return_indices(nums = [3,2,3], target = 6))
 # runtime: 7 ms, faster than 5.01% of submissions
 # memory: 15.1 MB, less than 15.82% of submissions
 # significant improvements needed
+
+
+# things I can learn:    
+        
+def kinetic_energy(m:'in KG', v:'in M/S' = 4)->'Joules': 
+    ke = 1/2*m*v**2
+    return ke
+
+"""
+From what you can see above, when declaring functions you can add some annotations to the functions for the
+purposes of documentation. 
+
+This is better than the way you used to it. So in a sense, you can document some stuff like units 
+or the ideal datatype, for example int, float.
+"""
