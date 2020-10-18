@@ -2,7 +2,7 @@
 Author: Yousef Nami
 Problem description: convert matrix equation of a multibody mechanical system into a state-space form
 Date started: 15.10.2020
-Date complete: 
+Date complete: 16.10.2020
 """
 import numpy as np
 
