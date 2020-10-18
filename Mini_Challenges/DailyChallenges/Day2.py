@@ -1,8 +1,8 @@
 """
 Author: Yousef Nami
-Problem description:
+Problem description: https://leetcode.com/problems/add-two-numbers/
 Date started: 14.10.2020
-Date completed:
+Date completed: 14.10.2020
 """
 
 def add_numbers(list1, list2):
@@ -12,8 +12,8 @@ def add_numbers(list1, list2):
     total = str(int(num1) + int(num2))
     for i in range(len(total), 0, -1):
         output.append(int(total[i-1]))
-    return output 
-        
+    return output
+
 
 def convert_to_str(list_num):
     mystring = ''
