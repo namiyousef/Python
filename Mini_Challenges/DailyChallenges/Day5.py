@@ -9,7 +9,7 @@ Problem constraints:
 Assumptions:
     - you can have arrays that include repetitive numbers
 Date started: 19.10.2020
-Date complete:
+Date complete: 19.10.2020
 Results:
     - faster than 20.98% of users
     - less memory than 8.02% of submissions
