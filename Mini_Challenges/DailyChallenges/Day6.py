@@ -10,16 +10,25 @@ Results:
 """
 
 def find_palindrome(s = '1234'):
-    for j in range(int(len(s)/2)):
-       for i in range(j,len(s)):
+    l = len(s)
+    if l == 1:
+        return s
+    for i in range(l-1):
+        for j in range(i+1):
+            if check_palindrome(s[j:j+l-i]):
+                return s[j:j+l-i]
+    return s[0] # this is for the case that you don't have a palindrome
+            
+    #for j in range(int(len(s)/2)):
+     #  for i in range(j,len(s)):
            #print(s[i:len(s)-j],j)
-           print(s[j:len(s)-i],j)
+      #     print(s[j:len(s)-i],j)
            #if check_palindrome(s[i:len(s)-j]):
            #    return s[i:len(s)-j]
            #elif check_palindrome(s[j:len(s)-i]):
            #    return s[j:len(s)-i]
  
-print(find_palindrome('cbbd'))
+print(find_palindrome("dtgrtoxuybwyfskikukcqlvprfipgaygawcqnfhpxoifwgpnzjfdnhpgmsoqzlpsaxmeswlhzdxoxobxysgmpkhcylvqlzenzhzhnakctrliyyngrquiuvhpcrnccapuuwrrdufwwungaevzkvwbkcietiqsxpvaaowrteqgkvovcoqumgrlsxvouaqzwaylehybqchsgpzbkfugujrostopwhtgrnrggocprnxwsecmvofawkkpjvcchtxixjtrnngrzqpiwywmnbdnjwqpmnifdiwzpmabosrmzhgdwgcgidmubywsnshcgcrawjvfiuxzyzxsbpfhzpfkjqcpfyynlpshzqectcnltfimkukopjzzmlfkwlgbzftsddnxrjootpdhjehaafudkkffmcnimnfzzjjlggzvqozcumjyazchjkspdlmifvsciqzgcbehqvrwjkusapzzxyiwxlcwpzvdsyqcfnguoidiiekwcjdvbxjvgwgcjcmjwbizhhcgirebhsplioytrgjqwrpwdciaeizxssedsylptffwhnedriqozvfcnsmxmdxdtflwjvrvmyausnzlrgcchmyrgvazjqmvttabnhffoe"))
 
 def check_palindrome(s):
     l = len(s) 
@@ -30,3 +39,5 @@ def check_palindrome(s):
         
     
 print(check_palindrome('23834892'))
+
+# code seems to work fine, got an error on leetcode 'time limit exceeded'
