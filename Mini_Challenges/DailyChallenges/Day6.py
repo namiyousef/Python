@@ -6,7 +6,7 @@ Constraints:
     - consists of lower and upper case chars
 Date started: 20.10.2020
 Date complete: 20.10.2020
-Results:
+Results: time-limit exceeded
 """
 def check_palindrome(s):
     l = len(s) 
