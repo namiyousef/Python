@@ -5,8 +5,8 @@ Constraints:
     - input string length bounded by 1 and 1000
     - consists of lower and upper case chars, as well as '.' and ','
 Date started: 21.10.2020
-Date complete:
-Results:
+Date complete: 22.10.2020
+Results: time limit exceeded, not sure why, code seems fairly efficient?
 """
 
 def encrypt_zigzag(s='PAYPALISHIRING', numRows = 3):
@@ -37,34 +37,43 @@ def encrypt_zigzag(s='PAYPALISHIRING', numRows = 3):
         row.append(1)
     print(string)
     
-encrypt_zigzag()
+#encrypt_zigzag()
 
 
-def zigzag(s = 'PAYPALISHIRING', numRows = 4):
+def zigzag(s = 'A', numRows = 5):
     string = ""
-    const = -2
     delta = [2*numRows - 2, -2]
-    index = 0
-    activate_flipflop = False
+    if len(s) == 1:
+        return s
     for i in range(numRows):
         j = i
         if i != numRows - 1 and i != 0:
-            delta[index] -= 2
-            if i != int(numRows/2):
-                activate_flipflop = True
+            delta[0] -= 2
+            delta[1] = 2*i
 
         else:
-            delta[index] = 2*numRows -2
-            activate_flipflop = False
+            delta[0] = 2*numRows -2
+            delta[1] = 2*numRows -2
+        index = 0
         while j < len(s):
+            print(j,s[j],delta[index],index)
             string += s[j]
             j = j + delta[index]
-            if activate_flipflop:
-                #index = 1 - index
-                #j += delta[index]
-                delta[index] += const
-                const = -const
+            index = 1 - index
+
                 
-            
-    print(string)
+    return string
 zigzag()
+
+def zigzag_final(s='PAYPALISHIRING', numRows = 5):
+    string = ""
+    delta = 2*numRows - 2
+    for i in range(numRows):
+        j = i
+        while j < len(s):
+            string+=s[j]
+            j += delta
+            if i != numRows -1 and i != 0 and j - 2*i < len(s):
+                string+=s[j - 2*i]
+    return string
+zigzag_final()    
