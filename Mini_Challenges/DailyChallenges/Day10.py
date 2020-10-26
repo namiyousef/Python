@@ -17,7 +17,6 @@ def check_palindrome(x):
         x = x//10
     
     for i in range(len(dig)//2):
-        print(dig[i],dig[len(dig) - i - 1])
         if dig[i] != dig[len(dig) - i - 1]:
             return False
     return True
