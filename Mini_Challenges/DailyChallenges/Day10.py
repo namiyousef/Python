@@ -2,8 +2,10 @@
 Author: Yousef Nami
 Problem definition: https://leetcode.com/problems/palindrome-number/
 Date started: 26.10.2020
-Date complete: 
+Date complete: 26.10.2020
 Results: 
+    - faster than 58%
+    - lower in memory than 98%
 
 """
 
