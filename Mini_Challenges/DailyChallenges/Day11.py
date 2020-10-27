@@ -15,22 +15,30 @@ def reg_ex_matching(s, p):
         
         if i == '*':
             l = len(letter)
-            
-            for k in range(j, j+l):
-                if s[k] != letter[k-j] and s[k] != '.':
+            k = 0
+            while s[j] != letter[-1]:
+                if s[j] != letter[k] and s[j] != '.':
                     if j == 0:
                         break
                     else:
                         return False
-                    
-           # if s[j:j+l] != letter:
-           #     if j == 0:
-           #         break
-           #     else:
-           #         return False
+                k += 1
+                j += 1
+                
+            while j < len(s) and (s[j] == letter[-1] or letter[-1] == '.'):  
+                j += 1
+            #for k in range(j, j+l):
+            #    if s[k] != letter[k-j] and s[k] != '.':
+            #        if j == 0:
+            #            break
+            #        else:
+            #            return False
+            #p = 0
+            #while k + p < len(s) - 2 and s[k + p] != letter[-1]:
+            #    p += 1
             
             
-            j += l
+            #j += l + p
             
             letter = ""
                     
@@ -38,7 +46,6 @@ def reg_ex_matching(s, p):
             
             letter += i
        
-      
     if j == 0:
         return s == p
     
